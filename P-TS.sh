@@ -8,7 +8,7 @@
 #
 # Activate Variables & Setup Environment
 Termux_Env () { [ ! -d "/data/data/com.termux/home" ]; }
-pause () { read -r "$@" }
+Pause () {  read -p 'Press enter to Continue'; }
 shopt -s expand_aliases
 alias goto="cat >/dev/null <<"
 UNAME=$(uname)
@@ -38,8 +38,7 @@ echo -e "${BLUE}"
 figlet -f standard Presents To You
 echo -e "${LRED}"
 figlet P-TS
-echo -e "Press Enter To Continue"
-pause
+Pause
 clear
 sleep 0.5
 
@@ -69,31 +68,31 @@ else
 	echo "Installation Complete!"
 	sleep 2
 	clear
-	goto start
+	goto start:;
 fi
 #
 if [[ "$OSTYPE" == "darwin"* ]];
     then
     echo "Not Supported"
-    pause
+    Pause
     exit 0
 fi
 if [[ "$OSTYPE" == "cygwin" ]];
     then
     echo "Not Supported"
-    pause
+    Pause
     exit 0
 fi
 if [[ "$OSTYPE" == "msys" ]];
     then
     echo "Not Supported"
-    pause
+    Pause
     exit 0
 fi
 if [[ "$OSTYPE" == "win32" ]];
     then
     echo "Not Supported"
-    pause
+    Pause
     exit 0
 fi
 if [[ "$OSTYPE" == "termux" ]];
@@ -104,8 +103,8 @@ if [[ "$OSTYPE" == "termux" ]];
     if [[ -s plugins.installed ]];
         then
         echo "Additional Requirements installed!"
-        pause 2
-        goto start
+        sleep 2
+        goto start:;
     else
        	python3 -m pip install requests bs4 html5lib lolcat |  tee plugins.installed
        	toilet -F border -f future This Tool Was
@@ -114,7 +113,7 @@ if [[ "$OSTYPE" == "termux" ]];
 		echo "Installation Complete!"
 		sleep 2
 		clear
-		goto start
+		goto start:;
     fi
 fi
 # Start T-PS Script
@@ -134,7 +133,7 @@ until [ "$selection" = "0" ]; do
     echo -e "${BLUE} Use The Tracker Wisely!!!"
     echo " "
     echo -e "${GREEN} Press Enter To Continue"
-    pause
+    Pause
     echo -e "${LRED}[1] ${LBLUE} Search Info About Phone Number"
     echo " "
     echo -e "${LRED}[2] ${LBLUE} Track Location Of An IP & Search Info About Email"
