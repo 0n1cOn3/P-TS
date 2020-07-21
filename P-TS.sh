@@ -44,11 +44,11 @@ sleep 0.5
 
 if [[ ! -f core.installed || ! -f plugin.installed ]];
 then
-	goto 1_install_setup:;
+    goto 1_install_setup:;
     else
-	echo "Found All Requirements!"
-	sleep 2
-	goto start:;
+    echo "Found All Requirements!"
+    sleep 2
+    goto start:;
 fi
 # Check OS for compatibility
 1_install_setup:
@@ -184,4 +184,3 @@ case $selection in
             * ) echo "Please enter option 1,2,3,4 or 0 for exit T-PS"
     esac
 done
-echo "Test"
