@@ -155,25 +155,25 @@ pause
 clear
 echo -e "${CYAN}"
 toilet -F border -f standard P-TS
-echo -e '\e[1;91m Created By kNIGHT & Anandh \e[0m'
+echo -e '${LRED}Created By kNIGHT & Anandh'
 echo " "
-echo -e "\e[1;92m For Any Questions Hit Me Up At \e[0m"
-echo -e "\e[1;34m[\e[0m\e[1;91m-\e[1;34m]\e[0m\e[0m\e[1;93m E-Mail:ethicalhackingzone@gmail.com \e[91m"
-echo -e "\e[1;34m[\e[0m\e[1;91m-\e[1;34m]\e[0m\e[0m\e[1;95m Instagram ID:cyb3r_kn1ght_0ff1c1al \e[0m"
-echo -e "\e[1;34m[\e[0m\e[1;91m-\e[1;34m]\e[0m\e[0m\e[1;96m Contributors To This Tool Are:- \e[0m"
-echo -e "\e[1;91m 	     -->R4SH4N_PH1L1PP & R081N \e[0m"
+echo -e "${GREEN} For Any Questions Hit Me Up At"
+echo -e "${LBLUE}[-] ${LYELLOW} E-Mail:ethicalhackingzone@gmail.com"
+echo -e "${LBLUE}[-] ${MAGENTA} Instagram ID:cyb3r_kn1ght_0ff1c1al"
+echo -e "${LBLUE}[-] ${LCYAN} Contributors To This Tool Are:"
+echo -e "${LRED}	-->R4SH4N_PH1L1PP & R081N & 0n1cOn3"
 echo " "
-echo -e "\e[1;34m Use The Tracker Wisely!!! \e[0m"
+echo -e "${BLUE} Use The Tracker Wisely!!!"
 echo " "
-echo -e "\e[1;92m Press Enter To Continue \e[0m"
+echo -e "${GREEN} Press Enter To Continue"
 pause
-echo -e "\e[1;93m[\e[0m\e[1;91m01\e[0m\e[1;93m]\e[0m\e[1;96m Search Info About Phone Number\e[0m"
+echo -e "${LRED}[01] ${LBLUE} Search Info About Phone Number"
 echo " "
-echo -e "\e[1;93m[\e[0m\e[1;91m02\e[0m\e[1;93m]\e[0m\e[1;96m Track Location Of An IP & Search Info About Email\e[0m"
+echo -e "${LRED}[02] ${LBLUE} Track Location Of An IP & Search Info About Email"
 echo " "
-echo -e "\e[1;93m[\e[0m\e[1;91m03\e[0m\e[1;93m]\e[0m\e[1;96m Update\e[0m"
+echo -e "${LRED}[03] ${LBLUE} Update"
 echo " "
-echo -e "\e[1;93m[\e[0m\e[1;91m04\e[0m\e[1;93m]\e[0m\e[1;96m Exit\e[0m"
+echo -e "${LRED}[04] ${LBLUE} Exit"
 echo " " 
-echo -e "\e[1;93m[\e[0m\e[1;77m*\e[0m\e[1;93m]\e[0m \e[1;36m Choose An Option: \e[0m"
+echo -e "${LRED}[*] ${LBLUE} Choose An Option:"
 read -p
