@@ -4,11 +4,11 @@
 # E-Mail:ethicalhackingzone@gmail.com
 # Instagram ID:cyb3r_kn1ght_0ff1c1al
 # Made By cYBER kNIGHT
-# Code Optimized by 0n1cOn3 V2.0
+# Code Optimized by 0n1cOn3 V2.0 + ported to Linux/macOS
 #
 # Activate Variables & Setup Environment
 Termux_Env () { [ ! -d "/data/data/com.termux/home" ]; }
-Pause () {  read -p 'Press enter to Continue'; }
+Pause () {  read -p -r 'Press Enter To Continue'; }
 shopt -s expand_aliases
 alias goto="cat >/dev/null <<"
 UNAME=$(uname)
@@ -33,9 +33,9 @@ LYELLOW="\e[93m"
 #
 clear
 echo -e "${CYAN}"
-toilet -F border -f future Ethical-Hacking-Zone
+toilet -F border -f "future Ethical-Hacking-Zone"
 echo -e "${BLUE}"
-figlet -f standard Presents To You
+figlet -f standard "Presents To You"
 echo -e "${LRED}"
 figlet P-TS
 Pause
@@ -53,7 +53,8 @@ fi
 # Check OS for compatibility
 1_install_setup:
 # Start T-PS Installation
-if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+if [[ "$OSTYPE" == "linux-gnu"* ]]; 
+    then
     echo "Installing Requirements....."
     sleep 2
     sudo apt-get git install figlet toilet python curl -y | sudo tee core.installed
@@ -62,8 +63,8 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
         echo "Additional Requirements installing....."
 else
     python3 -m pip install requests bs4 html5lib lolcat | sudo tee plugins.installed
-    toilet -F border -f future This Tool Was
-	toilet -F border -f future Made By cYBER kNIGHT
+    toilet -F border -f future "This Tool Was"
+	toilet -F border -f future "Made By cYBER kNIGHT"
 	sleep 3
 	echo "Installation Complete!"
 	sleep 2
@@ -100,28 +101,27 @@ if [[ "$OSTYPE" == "termux" ]];
     echo "Installing Requirements....."
     sleep 2
     apt install git figlet toilet python curl -y | tee core.installed
-    if [[ -s plugins.installed ]];
+    elif [[ -s plugins.installed ]];
         then
         echo "Additional Requirements installed!"
         sleep 2
         goto start:;
     else
        	python3 -m pip install requests bs4 html5lib lolcat |  tee plugins.installed
-       	toilet -F border -f future This Tool Was
-		toilet -F border -f future Made By cYBER kNIGHT
+       	toilet -F border -f future "This Tool Was"
+		toilet -F border -f future "Made By cYBER kNIGHT"
 		sleep 3
 		echo "Installation Complete!"
 		sleep 2
 		clear
 		goto start:;
-    fi
 fi
 # Start T-PS Script
 start:
 selection=
 until [ "$selection" = "0" ]; do
     echo -e "${CYAN}"
-    toilet -F border -f standard P-TS
+    toilet -F border -f standard "P-TS"
     echo -e "${LRED}Created By kNIGHT & Anandh"
     echo " "
     echo -e "${GREEN} For Any Questions Hit Me Up At"
@@ -132,7 +132,6 @@ until [ "$selection" = "0" ]; do
     echo " "
     echo -e "${BLUE} Use The Tracker Wisely!!!"
     echo " "
-    echo -e "${GREEN} Press Enter To Continue"
     Pause
     echo -e "${LRED}[1] ${LBLUE} Search Info About Phone Number"
     echo " "
@@ -144,22 +143,22 @@ until [ "$selection" = "0" ]; do
     echo " " 
     echo -e "${LRED}[*] ${LBLUE} Choose An Option:"
     echo -n "Enter Selection:"
-    read selection
+    read -r selection
     echo ""
 case $selection in
     1)
     clear
     echo -e "${LCYAN}"
-    figlet -f future Install And Run Orbot For Unlimited Usage....
+    figlet -f future "Install And Run Orbot For Unlimited Usage...."
     python3 info.py
-    figlet -f future Thanks For Using This Tool!!! | lolcat
+    figlet -f future "Thanks For Using This Tool!!!" | lolcat
     exit;;
         2) 
         clear
         echo -e "${LBLUE}"
-        figlet -f future Install And Run Orbot For Unlimited Usage....
+        figlet -f future "Install And Run Orbot For Unlimited Usage...."
         python3 gain_info.py
-        figlet -f future Thanks For Using This Tool!!! | lolcat
+        figlet -f future "Thanks For Using This Tool!!!" | lolcat
         exit;;
             3)
             clear
@@ -177,7 +176,7 @@ case $selection in
                 4)
                 clear
                  echo -e "${YELLOW}"
-                toilet -F border -f standard P-TS
+                toilet -F border -f standard "P-TS"
                 echo -e "${BLUE} Created By kNIGHT"
                 exit;;
                     0)
@@ -185,3 +184,4 @@ case $selection in
             * ) echo "Please enter option 1,2,3,4 or 0 for exit T-PS"
     esac
 done
+echo "Test"
