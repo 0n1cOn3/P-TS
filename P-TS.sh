@@ -46,7 +46,7 @@ sleep 0.5
 if [[ ! -f core.installed || ! -f plugin.installed ]];
 then
 	goto 1_install_setup:;
-else
+    else
 	echo "Found All Requirements!"
 	sleep 2
 	goto start:;
@@ -58,9 +58,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     echo "Installing Requirements....."
     sleep 2
     sudo apt-get git install figlet toilet python curl -y | sudo tee core.installed
-elif [[ -s plugins.installed ]];
-    then
-    echo "Additional Requirements installing....."
+    elif [[ -s plugins.installed ]];
+        then
+        echo "Additional Requirements installing....."
 else
     python3 -m pip install requests bs4 html5lib lolcat | sudo tee plugins.installed
     toilet -F border -f future This Tool Was
