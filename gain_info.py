@@ -5,7 +5,7 @@ import sys
 
 print ('\n [1] Search Info About Email ')
 print ('\n [2] Track Location Of IP ')
-choice = int(input("\n Enter choice : "))
+choice = int(input("\n Enter your choice : "))
 
 if choice == 1:
   try:
@@ -25,9 +25,9 @@ if choice == 1:
       print (' Scam : ', e)
       print (' Disposable : ', f)
   except KeyError as Error:
-      print ('\n Use Tor!!!')
+      print ('\n You need Tor. Please start Tor and try again!')
   except KeyboardInterrupt as KeyError:
-      print ('\n Exiting.....')
+      print ('\n Request interrupted! Will exit now!')
 elif choice == 2:
   try:
       sys.stdout.write('\n Enter IP : ')
@@ -59,7 +59,7 @@ elif choice == 2:
       aqr = open('location.png', 'wb')
       aqr.write(rr.content)
   except KeyboardInterrupt as di:
-      print ('\n Exiting.....')
+      print ('\n Request interrupted, will exit now!')
   except KeyError as Error:
-      print ('\n Use Tor / check ur ip!!!')
+      print ('\n Use Tor and check your ip')
 exit()

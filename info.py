@@ -32,10 +32,10 @@ headers = {
         'Cache-Control': 'no-cache'
 }
 
-ulr = "https://numverify.com/php_helper_scripts/phone_api.php?secret_key={}&number={}".format(ay, phe)
+url = "https://numverify.com/php_helper_scripts/phone_api.php?secret_key={}&number={}".format(ay, phe)
 
 try:
-   rr = req.get(ulr, headers=headers)
+   rr = req.get(url, headers=headers)
    inf = rr.content.decode()
    ze2 = json.loads(inf)
    ad = (ze2['valid'])
@@ -48,7 +48,7 @@ try:
    c2r = (ze2['carrier'])
    lne = (ze2['line_type'])
 except KeyError:
-   print ('\n Using Tor is mandatory !!! ')
+   print ('\n Does work only with Tor! Will exit now!')
    exit()
 
 da = "\033[32m"
