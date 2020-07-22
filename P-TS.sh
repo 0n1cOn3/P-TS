@@ -161,8 +161,7 @@ do
     echo " "
     echo -e "${LRED}[4] ${LBLUE} Exit"
     echo " "
-    echo -e "${LRED}[*] ${LBLUE} Choose An Option:"
-    echo -n "Enter Selection:"
+    echo -n "${LRED}[*] ${LBLUE} Choose An Option:"
     read selection
     echo ""
     case $selection in
