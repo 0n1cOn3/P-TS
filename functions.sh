@@ -10,7 +10,7 @@
 function install_core_linux {
 
     if ! [ -f "core.installed" ];then
-      echo -e "Install Termux Core Packages"
+      echo -e "Install Linux Core Packages"
       sleep 2
       sudo apt-get install git figlet toilet python python3 curl -y | sudo tee core.installed
       clear
